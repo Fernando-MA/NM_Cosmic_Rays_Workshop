@@ -24,7 +24,23 @@ def set_time(inicio, fin, c_rate):
     print(f'Time starts on {inicio} and ends on {fin}')
     
     return tiempo
+
+
+# Create time for long term data
+
+def set_long_term_time(inicio, fin):
     
+    """Defines time series to plot long term data in a similar way to set_time().
+    The c_rate parameter is not necessary here since the data will be always monthly or 
+    yearly spanned and must be modified accordingly.
+    """
+    # Special thx to:
+    # https://stackoverflow.com/questions/34898525/generate-list-of-months-between-interval
+
+    tiempo = pd.date_range(inicio, fin, freq='MS').tolist()
+    print(f'Time starts on {inicio} and ends on {fin}')
+    
+    return tiempo
 
 
 # Modify data resolution 
