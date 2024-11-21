@@ -21,7 +21,7 @@ def set_time(inicio, fin, c_rate):
     tiempo = []
     for i in range(0, int(seconds), int(delta.total_seconds())):
         tiempo.append(inicio + timedelta(seconds=i)) 
-    print(f'Time starts on {inicio} and ends on {fin}')
+    print(f'Time period of interest starts on {inicio} and ends on {fin}')
     
     return tiempo
 
@@ -38,7 +38,7 @@ def set_long_term_time(inicio, fin):
     # https://stackoverflow.com/questions/34898525/generate-list-of-months-between-interval
 
     tiempo = pd.date_range(inicio, fin, freq='MS').tolist()
-    print(f'Time starts on {inicio} and ends on {fin}')
+    print(f'Time period of interest starts on {inicio} and ends on {fin}')
     
     return tiempo
 
